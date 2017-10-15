@@ -2,6 +2,7 @@ import {
   Component,
   OnInit
 } from '@angular/core';
+import * as $ from 'jquery';
 
 import { AppState } from '../app.service';
 import { OverviewService } from '../overview/overview.service';
