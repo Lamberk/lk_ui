@@ -35,6 +35,7 @@ export class HomeComponent implements OnInit {
   }
 
   public ngOnInit() {
+    this.getReports();
     this.poll();
 
     let today = new Date();
