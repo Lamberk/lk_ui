@@ -2,11 +2,11 @@ import {
   Component,
   OnInit
 } from '@angular/core';
-import * as $ from 'jquery';
 
 import { AppState } from '../app.service';
 import { OverviewService } from '../overview/overview.service';
 import { ReportsService } from '../report/report.service';
+import * as $ from 'jquery';
 
 @Component({
   /**
@@ -66,7 +66,7 @@ export class HomeComponent implements OnInit {
   }
 
   public initPicker(id: string, date): void {
-    let $input = $(id).pickadate({
+    let $input = (<any>$(id)).pickadate({
       selectMonths: true, // Creates a dropdown to control month
       selectYears: 5, // Creates a dropdown of 15 years to control year
       format: 'dd/mm/yyyy'
@@ -76,10 +76,10 @@ export class HomeComponent implements OnInit {
   }
 
   public getOverview(): void {
-    let from = $('#from_datepicker').pickadate();
+    let from = (<any>$('#from_datepicker')).pickadate();
     let fromPicker = from.pickadate('picker');
     let fromValue = fromPicker.get();
-    let to = $('#to_datepicker').pickadate();
+    let to = (<any>$('#to_datepicker')).pickadate();
     let toPicker = to.pickadate('picker');
     let toValue = toPicker.get('value');
     this.overviewService.getOverview(fromValue, toValue)
@@ -98,10 +98,10 @@ export class HomeComponent implements OnInit {
   }
 
   public createReport() {
-    let from = $('#report_from_datepicker').pickadate();
+    let from = (<any>$('#report_from_datepicker')).pickadate();
     let fromPicker = from.pickadate('picker');
     let fromValue = fromPicker.get();
-    let to = $('#report_to_datepicker').pickadate();
+    let to = (<any>$('#report_to_datepicker')).pickadate();
     let toPicker = to.pickadate('picker');
     let toValue = toPicker.get('value');
 
