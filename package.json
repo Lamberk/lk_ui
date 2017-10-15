@@ -153,7 +153,7 @@
     "tslint": "~4.5.1",
     "tslint-loader": "^3.5.2",
     "typedoc": "^0.7.1",
-    "typescript": "~2.2.2",
+    "typescript": "~2.5.3",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "url-loader": "^0.5.8",
     "webpack": "^3.5.5",
